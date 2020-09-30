@@ -4,7 +4,11 @@ use 5.016;
 use warnings;
 
 my ($a,$b,$c) = @ARGV;
-die "Invalid arguments." if @ARGV < 3;
+if (@ARGV < 3)
+{
+	print("Bad arguments\n");
+	die
+}
 if ($a == 0) {
     print "Not a quadratic equation.\n";
 }
